@@ -1,0 +1,145 @@
+﻿@page
+@model TSS.Views.Home.AboutModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="about">
+    <div class="swiper aboutContainer aboutInner">
+        <h2>Sobre a TSS</h2>
+        <div class="swiper-wrapper aboutBase shadow-lg">
+            <!-- card1 -->
+            <div class="cardAbout swiper-slide">
+                <ul>
+                    <li>
+                        <img src="~/img/Beatriz (2).jpg" alt="perfil1">
+                    </li>
+                    <li>
+                        <h4>Beatriz</h4>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </li>
+                    <li class="cardCargo">
+                        <h4>Analista</h4>
+                    </li>
+                    <li class="socialMedia">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-linkedin"></i>
+                    </li>
+                </ul>
+            </div>
+            <!-- card2 -->
+            <div class="cardAbout swiper-slide">
+                <ul>
+                    <li>
+                        <img src="~/img/Yuri (2).jpg" alt="perfil1">
+                    </li>
+                    <li>
+                        <h4>Yuri</h4>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li class="cardCargo">
+                        <h4>Especialista</h4>
+                    </li>
+                    <li class="socialMedia">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-linkedin"></i>
+                    </li>
+                </ul>
+            </div>
+            <!-- card3 -->
+            <div class="cardAbout swiper-slide">
+                <ul>
+                    <li>
+                        <img src="~/img/Nicolas.jpg" alt="perfil1">
+                    </li>
+                    <li>
+                        <h4>Nicolas</h4>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </li>
+                    <li class="cardCargo">
+                        <h4>Desenvolvedor</h4>
+                    </li>
+                    <li class="socialMedia">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-linkedin"></i>
+                    </li>
+                </ul>
+            </div>
+            <!-- card4 -->
+            <div class="cardAbout swiper-slide">
+                <ul>
+                    <li>
+                        <img src="~/img/PauloCesar (2).jpg" alt="perfil1">
+                    </li>
+                    <li>
+                        <h4>Paulo César</h4>
+                    </li>
+                    <li>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                    </li>
+                    <li class="cardCargo">
+                        <h4>Comercial</h4>
+                    </li>
+                    <li class="socialMedia">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-linkedin"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- controles -->
+        <div class="swiper-button-next myNext"></div>
+        <div class="swiper-button-prev myPrev"></div>
+        <div class="swiper-pagination myPage"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="footerContainer align-items-center">
+        <div class="localizaCenter d-flex text-center">
+            <img class="logofooter" src="~/img/logo.png" alt="">
+            <div class="localizaFooter d-flex align-items-center justify-content-center">
+                <img class="localizaImg" src="~/img/localizaPing.png" alt="">
+                <div class="paragrafos flex-column">
+                    <p class="border-bottom border-3 mt-2">
+                        Endereço: Avenida Marechal Tito, 1500 <br>
+                        <nobr>São Miguel Paulista, São Paulo SP, 08010-090</nobr>
+                    </p>
+                    <div>
+                        <a href="">Clique aqui para ver no mapa!</a>
+                    </div>
+                    <div class="faledenois">
+                        <p>Fale conosco: TSS@contato.br / (11)4002-8922</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="robson position-absolute bottom-0 right-0 img-fluid" src="~/img/robson.png" alt="">
+    </div>
+</footer>

@@ -1,0 +1,197 @@
+﻿@page
+@model TSS.Views.Home.ServicesModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+}
+
+<header>
+    <div class="fundoTopServices">
+        <section id="top" class="text-center">
+            <div class="topContainerServices">
+                <h1 class="text-white">Serviços</h1>
+            </div>
+        </section>
+    </div>
+</header>
+
+<main>
+    <section>
+        <div>
+            <div class="col text-center mt-5">
+                <h1>Nossos serviços</h1>
+                <div class="underline mx-auto mt-3"></div>
+            </div>
+        </div>
+        <div class="container centered-content">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 mb-3 ">
+                    <div class="cardServices card text-center shadow-lg border-0" style="border-radius: 15px;">
+                        <div class="card-body">
+                            <div class="fontCardsServices d-flex justify-content-center align-items-center">
+                                <i class="bi bi-code-square"></i>
+                            </div>
+                            <h5 class="card-title">Desenvolvimento Web</h5>
+                            <p class="card-text">
+                                Fazemos a aplicaçoes de sites e resposividade com alta tecnologia
+                                (Criação de sites são separadamentes entre em contato
+                                para mais detalhes)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="cardServices card text-center shadow-lg border-0" style="border-radius: 15px;">
+                        <div class="card-body">
+                            <div class="fontCardsServices d-flex justify-content-center align-items-center">
+                                <i class="bi bi-server"></i>
+                            </div>
+                            <h5 class="card-title">Manutenção de Servidores</h5>
+                            <p class="card-text">
+                                Garantimos alta
+                                performance e segurança para seu negócio. Profissionais qualificados prontos para
+                                resolver qualquer desafio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="cardServices card text-center shadow-lg border-0" style="border-radius: 15px;">
+                        <div class="card-body">
+                            <div class="fontCardsServices d-flex justify-content-center align-items-center">
+                                <i class="bi bi-pc-display"></i>
+                            </div>
+                            <h5 class="card-title">Manutenção de computadores</h5>
+                            <p class="card-text">
+                                Prestamos serviços de manutenção de computadores, nossa equipe está pronta para oferecer manutenção de qualidade, mantendo seus equipamentos funcionando.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="pricing container p-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card h-100 shadow-lg">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <h5 class="card-title">Basico</h5>
+                                <small>Pequenos Negócios</small>
+                                <br><br>
+                                <span class="h2">R$200</span>/Por Mês
+                                <br><br>
+                            </div>
+                            <p class="card-text">
+                                Inclui diagnóstico, reparo e manutenção de hardware e software em
+                                computadores.
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <i class="bi bi-check-lg"></i> Reparo e manutenção de
+                                computadores
+                            </li>
+                            <li class="list-group-item xIcon">
+                                <i class="bi bi-x-lg"></i> Reparo e manutenção de
+                                computadores redes
+                            </li>
+                            <li class="list-group-item xIcon"><i class="bi bi-x-lg"></i> Serviços Web</li>
+                        </ul>
+                        <div class="card-body text-center">
+                            <a asp-area="" asp-controller="Conta" asp-action="Register" class="btn btn-outline-primary btn-lg" style="border-radius:30px">Selecionar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card h-100 shadow-lg recomendado">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <h5 class="card-title">Padrão</h5>
+                                <small>Médios Negócios</small>
+                                <br><br>
+                                <span class="h2">R$400</span>/Por Mês
+                                <br><br>
+                            </div>
+                            <p class="card-text">
+                                Inclui diagnóstico, reparo e manutenção de hardware, software em
+                                computadores e servidores.
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <i class="bi bi-check-lg"></i> Reparo e manutenção de
+                                computadores
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-check-lg"></i> Reparo e manutenção de
+                                computadores redes
+                            </li>
+                            <li class="list-group-item xIcon"><i class="bi bi-x-lg"></i> Serviços Web</li>
+                        </ul>
+                        <div class="card-body text-center">
+                            <a asp-area="" asp-controller="Conta" asp-action="Register" class="btn btn-outline-primary btn-lg" style="border-radius:30px">Selecionar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card h-100 shadow-lg">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <h5 class="card-title">Premium</h5>
+                                <small>Grandes Empresas</small>
+                                <br><br>
+                                <span class="h2">R$800</span>/Por Mês
+                                <br><br>
+                            </div>
+                            <p class="card-text">
+                                Inclui diagnóstico, reparo e manutenção de hardware, software em
+                                computadores, servidores e web
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <i class="bi bi-check-lg"></i> Reparo e manutenção de
+                                computadores
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-check-lg"></i> Reparo e manutenção de
+                                computadores redes
+                            </li>
+                            <li class="list-group-item"><i class="bi bi-check-lg"></i> Serviços Web</li>
+                        </ul>
+                        <div class="card-body text-center">
+                            <a asp-area="" asp-controller="Conta" asp-action="Register" class="btn btn-outline-primary btn-lg" style="border-radius:30px">Selecionar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footerContainer align-items-center">
+        <div class="localizaCenter d-flex text-center">
+            <img class="logofooter" src="~/img/logo.png" alt="">
+            <div class="localizaFooter d-flex align-items-center justify-content-center">
+                <img class="localizaImg" src="~/img/localizaPing.png" alt="">
+                <div class="paragrafos flex-column">
+                    <p class="border-bottom border-3 mt-2">
+                        Endereço: Avenida Marechal Tito, 1500 <br>
+                        <nobr>São Miguel Paulista, São Paulo SP, 08010-090</nobr>
+                    </p>
+                    <div>
+                        <a href="">Clique aqui para ver no mapa!</a>
+                    </div>
+                    <div class="faledenois">
+                        <p>Fale conosco: TSS@contato.br / (11)4002-8922</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="robson position-absolute bottom-0 right-0 img-fluid" src="~/img/robson.png" alt="">
+    </div>
+</footer>

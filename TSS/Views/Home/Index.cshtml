@@ -1,0 +1,150 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<header class="overflow-hidden">
+    <div class="fundotop">
+        <!-- Navbar -->
+
+        <section id="top" class="text-center">
+            <div class="topContainer">
+                <div class="logoContainer">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="carousel-container col-md-4 shadow-lg">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/carrosel1.png" class="d-block w-100 img-fluid" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Nossa Empresa</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/carrosel2.png" class="d-block w-100 img-fluid" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Sala servidores</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/carrosel3.png" class="d-block w-100 img-fluid" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Sede da empresa</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+
+<main>
+    <section id="homeContent" class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contentCards">
+                    <div class="card1 mx-4">
+                        <h1 class="text-center fs-2">Sobre a TSS</h1>
+                        <div class="card d-flex justify-content-center">
+                            <img src="img/logo.png" class="card-img-top logomain" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-black fs-5">
+                                    A TSS é uma empresa de T.I. com seis membros,
+                                    oferecendo uma variedade de serviços para atender às necessidades de TI dos
+                                    clientes. Desde suporte técnico até desenvolvimento de software, garantimos
+                                    soluções eficazes e personalizadas para impulsionar o sucesso da sua empresa.
+                                </p>
+                                <a asp-area="" asp-controller="Home" asp-action="About" class="btn btn-outline-primary btn-lg" style="border-radius:30px">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contentCards">
+                    <div class="card1 mx-4">
+                        <h1 class="text-center fs-2">Nossos Serviços</h1>
+                        <div class="card">
+                            <img src="img/sobrenos.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-black fs-5">
+                                    Oferecemos pacotes de serviços de T.I
+                                    às necessidades específicas do seu negócio. Soluções básicas para pequenas
+                                    empresas até serviços completos para grandes empresas, estamos aqui para
+                                    garantir que sua tecnologia funcione de forma eficiente e segura, permitindo se
+                                    concentrar no crescimento da empresa.
+                                </p>
+                                <a class="btn btn-outline-primary btn-lg" style="border-radius:30px" asp-area="" asp-controller="Home" asp-action="Services">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contentCards">
+                    <div class="card1 mx-4">
+                        <h1 class="text-center fs-2">Fique por dentro</h1>
+                        <div class="card">
+                            <img src="img/feedback.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-black fs-5">
+                                    Explore nosso portfólio para visualizar
+                                    as empresas com as quais colaboramos. Nossa página web apresenta uma variedade
+                                    de projetos concluídos, demonstrando nossa experiência e expertise em fornecer
+                                    soluções de T.I. eficazes. Descubra como podemos ajudar a impulsionar o sucesso
+                                    do seu negócio
+                                </p>
+                                <a class="btn btn-outline-primary btn-lg" style="border-radius:30px" asp-area="" asp-controller="Home" asp-action="Portfolio">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>
+
+
+<footer>
+    <div class="footerContainer align-items-center">
+        <div class="localizaCenter d-flex text-center">
+            <img class="logofooter" src="img/logo.png" alt="">
+            <div class="localizaFooter d-flex align-items-center justify-content-center">
+                <img class="localizaImg" src="img/localizaPing.png" alt="">
+                <div class="paragrafos flex-column">
+                    <p class="border-bottom border-3">
+                        Endereço: Avenida Marechal Tito, 1500 <br>
+                        <nobr>São Miguel Paulista, São Paulo SP, 08010-090</nobr>
+                    </p>
+                    <div>
+                        <a href="">Clique aqui para ver no mapa!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="robson position-absolute bottom-0 right-0 img-fluid" src="img/robson.png" alt="">
+    </div>
+</footer>
+

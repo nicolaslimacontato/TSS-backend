@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdm.cshtml";
+    var usuariosPorTipo = ViewBag.UsuariosPorTipo as IEnumerable<dynamic>;
+    var tiposJson = ViewBag.TiposJson as string;
+    var countsJson = ViewBag.CountsJson as string;
+}
+
+<div class="container">
+    <h2 class="mt-4 mb-4">Análise de Usuários</h2>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <h3>Total de Usuários: @ViewBag.TotalUsuarios</h3>
+            <canvas id="usuariosChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Tipo de Usuário</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in usuariosPorTipo)
+                    {
+                        <tr>
+                            <td>@item.Tipo</td>
+                            <td>@item.Count</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Incluindo o script do Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Convertendo as strings JSON em arrays
+    var tipos = JSON.parse('@Html.Raw(tiposJson)');
+    var counts = JSON.parse('@Html.Raw(countsJson)');
+
+    // Inicializando o gráfico
+    var ctx = document.getElementById('usuariosChart').getContext('2d');
+    var usuariosChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: tipos,
+            datasets: [{
+                label: 'Número de Usuários por Tipo',
+                data: counts,
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

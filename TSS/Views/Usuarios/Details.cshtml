@@ -1,0 +1,68 @@
+﻿@model TSS.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutAdm.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Senha)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Senha)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Dtnasc)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Dtnasc)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CPF_CNPJ)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CPF_CNPJ)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Tipousuario)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Tipousuario.Nome)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Plano)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Plano.Descricao)
+        </dd>
+    </dl>
+</div>
+
+<div class="d-flex gap-2 mt-2">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

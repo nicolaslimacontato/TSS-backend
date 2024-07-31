@@ -1,0 +1,170 @@
+﻿@page
+@model TSS.Views.Home.PortfolioModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="container">
+        <section id="contentPortifolio">
+            <div class="row">
+                <div class="col text-center mb-1">
+                    <h1 class="fs-2">Clientes</h1>
+                    <div class="underline mx-auto mt-3"></div>
+                </div>
+            </div>
+
+            <div class="row mt-3 mb-4 button-group filter-button-group">
+                <div class="col d-flex justify-content-center">
+                    <button type="button" data-filter="*" class="btn btn-primary mx-1 text-dark">Tudo</button>
+                    <button type="button" data-filter=".empresas"
+                            class="btn btn-primary mx-1 text-dark">
+                        Empresas
+                    </button>
+                    <button type="button" data-filter=".marcas"
+                            class="btn btn-primary mx-1 text-dark">
+                        Marcas
+                    </button>
+                    <button type="button" data-filter=".franquias"
+                            class="btn btn-primary mx-1 text-dark">
+                        Franquias
+                    </button>
+                </div>
+            </div>
+
+            <div class="row justify-content-center g-4" id="product-list">
+                <div class="col-lg-4 col-md-6 empresas">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/dia.png" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 marcas">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/stone_logo-4.jpg" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 franquias">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/burger.jpg" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 empresas">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/espacoreformar.png" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 marcas">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/assai.png" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 franquias">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/oboticario.png" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 empresas">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/tenda.png" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 marcas">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/santander.png" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 franquias">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/img/Casas-Bahia.jpg" class="img-fluid d-block mx-auto">
+                        </div>
+                        <div class="product-content text-center py-3">
+                            <span class="d-block text-uppercase fw-bold">nome</span>
+                            <span class="d-block">que serviço</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="mt-5">
+    <div class="footerContainer align-items-center mt-5">
+        <div class="localizaCenter d-flex text-center">
+            <img class="logofooter" src="~/img/logo.png" alt="">
+            <div class="localizaFooter d-flex align-items-center justify-content-center">
+                <img class="localizaImg" src="~/img/localizaPing.png" alt="">
+                <div class="paragrafos flex-column">
+                    <p class="border-bottom border-3 mt-2">
+                        Endereço: Avenida Marechal Tito, 1500 <br>
+                        <nobr>São Miguel Paulista, São Paulo SP, 08010-090</nobr>
+                    </p>
+                    <div>
+                        <a href="">Clique aqui para ver no mapa!</a>
+                    </div>
+                    <div class="faledenois">
+                        <p>Fale conosco: TSS@contato.br / (11)4002-8922</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="robson position-absolute bottom-0 right-0 img-fluid" src="~/img/robson.png" alt="">
+    </div>
+</footer>

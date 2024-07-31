@@ -1,0 +1,95 @@
+﻿@page
+@model IEnumerable<TSS.Models.Servico>
+@{
+    Layout = "~/Views/Shared/_LayoutAdm.cshtml";
+}
+
+@{
+    var totalUsuarios = ViewBag.TotalUsuarios ?? 0;
+    var totalPlanos = ViewBag.TotalPlanos ?? 0;
+    var totalServicos = ViewBag.TotalServicos ?? 0;
+    var servicosPendentes = ViewBag.ServicosPendentes ?? 0;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mt-4 mb-4">Admin Dashboard <i class='bx bxs-dashboard'></i></h2>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Usuários</h5>
+                    <p class="card-text">@totalUsuarios</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Planos</h5>
+                    <p class="card-text">@totalPlanos</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Serviços</h5>
+                    <p class="card-text">@totalServicos</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Serviços Pendentes</h5>
+                    <p class="card-text">@servicosPendentes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <h3>Relatórios</h3>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Relatório de Serviços</h5>
+                    <p class="card-text">Análise detalhada dos serviços prestados, pendentes e concluídos.</p>
+                    <a href="@Url.Action("AnaliseServicos", "Admin")" class="btn btn-primary">Ver Relatório</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <h3>Análises</h3>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Análise de Usuários</h5>
+                    <p class="card-text">Estatísticas e gráficos sobre o crescimento dos usuários e distribuição dos tipos de usuários.</p>
+                    <a href="@Url.Action("AnaliseUsuarios", "Admin")" class="btn btn-primary">Ver Análise</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        margin: 10px 0;
+    }
+
+    .card-body h5 {
+        font-size: 1.25rem;
+    }
+
+    .card-body p {
+        font-size: 1rem;
+    }
+</style>

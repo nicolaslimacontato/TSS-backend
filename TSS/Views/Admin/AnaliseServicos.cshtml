@@ -1,0 +1,82 @@
+﻿@page
+@{
+    Layout = "~/Views/Shared/_LayoutAdm.cshtml";
+    var servicosPorTipo = ViewBag.ServicosPorTipo as IEnumerable<dynamic>;
+    var tipos = ViewBag.Tipos as List<string> ?? new List<string>();
+    var counts = ViewBag.Counts as List<int> ?? new List<int>();
+}
+
+<div class="container">
+    <h2 class="mt-4 mb-4">Análise de Serviços</h2>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <h3>Total de Serviços: @ViewBag.TotalServicos</h3>
+            <canvas id="servicosChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Tipo de Serviço</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (servicosPorTipo != null && servicosPorTipo.Any())
+                    {
+                        foreach (var item in servicosPorTipo)
+                        {
+                            <tr>
+                                <td>@item.Tipo</td>
+                                <td>@item.Count</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="2">Nenhum serviço encontrado.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Verificar se tipos e counts não são null ou vazios
+    var tipos = @Html.Raw(ViewBag.TiposJson ?? "[]");
+    var counts = @Html.Raw(ViewBag.CountsJson ?? "[]");
+
+    // Verificar no console para debug
+    console.log("Tipos: ", tipos);
+    console.log("Counts: ", counts);
+
+    var ctx = document.getElementById('servicosChart').getContext('2d');
+    var servicosChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: tipos,
+            datasets: [{
+                label: 'Número de Serviços por Tipo',
+                data: counts,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

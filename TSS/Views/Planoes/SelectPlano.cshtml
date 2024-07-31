@@ -1,0 +1,35 @@
+﻿@model IEnumerable<TSS.Models.Plano>
+
+@{
+    Layout = "~/Views/Shared/_LayoutCli.cshtml";
+}
+
+<div class="container">
+    <h2 class="mt-4 mb-4">Selecione um Plano</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var plano in Model)
+            {
+                <tr>
+                    <td>@plano.Id</td>
+                    <td>@plano.Nome</td>
+                    <td>@plano.Descricao</td>
+                    <td>@plano.Preco</td>
+                    <td>
+                        <a href="@Url.Action("AssignPlano", "Planoes", new { id = plano.Id })" class="btn btn-primary">Selecionar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
